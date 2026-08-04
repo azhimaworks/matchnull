@@ -20,5 +20,8 @@
   "devDependencies": {
     "@extendscript/csinterface": "^1.0.1",
     "extendscriptr": "^1.2.5"
+  },
+  "dependencies": {
+    "typescript": "^7.0.2"
   }
 }
