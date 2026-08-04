@@ -211,12 +211,12 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
     devDependencies:
-      '@extendscript/csinterface':
-        specifier: ^1.0.1
-        version: 1.0.1
       extendscriptr:
         specifier: ^1.2.5
         version: 1.2.5(supports-color@2.0.0)
+      types-for-adobe:
+        specifier: ^7.2.5
+        version: 7.2.5
 
 packages:
 
@@ -716,9 +716,6 @@ packages:
   '@babel/types@7.29.8':
     resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
     engines: {node: '>=6.9.0'}
-
-  '@extendscript/csinterface@1.0.1':
-    resolution: {integrity: sha512-75NXLyZskz6f06dMuB0rB5asW37Y61AMIGyoLWf2mNVJlUzUFA+MO0n62W+Ak9oSbXQI45D/b0wqHKDC835uxw==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -1756,6 +1753,9 @@ packages:
   typedarray@0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
 
+  types-for-adobe@7.2.5:
+    resolution: {integrity: sha512-QUoHmjFbA/g+DnFMYwcNcGczDgcPmbtIYcmfDQZEUmtLK51W91BUlyMOdRUyuxQ8VjNuvROAjbORCz8iaML4hg==}
+
   typescript@7.0.2:
     resolution: {integrity: sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==}
     engines: {node: '>=16.20.0'}
@@ -2492,8 +2492,6 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
-
-  '@extendscript/csinterface@1.0.1': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -3690,6 +3688,8 @@ snapshots:
       is-typed-array: 1.1.15
 
   typedarray@0.0.6: {}
+
+  types-for-adobe@7.2.5: {}
 
   typescript@7.0.2:
     optionalDependencies:
