@@ -16,5 +16,9 @@
       "onFail": "download"
     }
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@extendscript/csinterface": "^1.0.1",
+    "extendscriptr": "^1.2.5"
+  }
 }
