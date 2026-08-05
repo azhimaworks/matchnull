@@ -15,21 +15,21 @@ import { mapPropertiesForNull } from "./util";
 import { getAverage } from "@/util/math";
 
 const createNull = (logger: Logger) => {
-  const compItem = getSelectedCompItem();
-  if (!compItem) {
-    logger.error("Please select a composition");
-    return;
-  }
-
-  const selectedLayer = getSelectedLayer(compItem);
-  if (selectedLayer.length <= 0) {
-    logger.error("Please select at lease one layer");
-    return;
-  }
-
-  let is3DLayer = false;
-  let firstLayer: AVLayer = selectedLayer[0] as AVLayer;
   try {
+    const compItem = getSelectedCompItem();
+    if (!compItem) {
+      logger.error("Please select a composition");
+      return;
+    }
+
+    const selectedLayer = getSelectedLayer(compItem);
+    if (selectedLayer.length <= 0) {
+      logger.error("Please select at least one layer");
+      return;
+    }
+
+    let is3DLayer = false;
+    let firstLayer: AVLayer = selectedLayer[0] as AVLayer;
     const propertiesInfoLayers = selectedLayer.map((l, index) => {
       const layer = l as AVLayer;
       if (index === 0) firstLayer = layer;
