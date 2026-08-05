@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          cache: true
+
+      - name: install dependency
+        run: pnpm install
+
+      - name: build matchnull
+        run: pnpm build
+
+      - name: configure bot user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: release-it
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm release-it --ci
