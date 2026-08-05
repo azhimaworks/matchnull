@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "pnpm esbuild src/index.ts --bundle --outfile=dist/bundle.js --platform=node",
-    "build": "pnpm extendscriptr --script dist/bundle.js --output dist/matchnull.jsx"
+    "build": "pnpm extendscriptr --script dist/bundle.js --output dist/matchnull.jsx",
+    "release": "release-it"
   },
   "keywords": [],
   "author": "",
@@ -20,8 +21,10 @@
   },
   "type": "module",
   "devDependencies": {
+    "@release-it/conventional-changelog": "^12.0.0",
     "esbuild": "^0.28.1",
     "extendscriptr": "^1.2.5",
+    "release-it": "^21.0.1",
     "types-for-adobe": "^7.2.5"
   },
   "dependencies": {
