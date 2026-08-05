@@ -17,11 +17,16 @@ import { getAverage } from "@/util/math";
 const createNull = (logger: Logger) => {
   const compItem = getSelectedCompItem();
   if (!compItem) {
-    alert("Please select a composition");
+    logger.error("Please select a composition");
     return;
   }
 
   const selectedLayer = getSelectedLayer(compItem);
+  if (selectedLayer.length <= 0) {
+    logger.error("Please select at lease one layer");
+    return;
+  }
+
   let is3DLayer = false;
   let firstLayer: AVLayer = selectedLayer[0] as AVLayer;
   try {
