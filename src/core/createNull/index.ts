@@ -135,11 +135,48 @@ const createNull = (logger: Logger) => {
       }
     });
 
-    selectedLayer.forEach((layer) => (layer.parent = nullLayer));
-    nullLayer.moveBefore(firstLayer);
-    nullLayer.inPoint = firstLayer.inPoint;
-    nullLayer.outPoint = firstLayer.outPoint;
+    let topLayer: {
+      layer: Layer;
+      index: number;
+    } | null = null;
+    for (const layer of selectedLayer) {
+      if (!topLayer)
+        topLayer = {
+          layer,
+          index: layer.index,
+        };
+
+      topLayer =
+        layer.index < topLayer.index
+          ? {
+              layer,
+              index: layer.index,
+            }
+          : topLayer;
+    }
+
+    if (topLayer) {
+      nullLayer.moveBefore(topLayer.layer);
+    }
+
+    let inPoint: number | null = null;
+    let outPoint = 0;
+    selectedLayer.forEach((layer) => {
+      if (!inPoint) {
+        inPoint = layer.inPoint;
+      }
+
+      inPoint = inPoint > layer.inPoint ? layer.inPoint : inPoint;
+      outPoint = outPoint < layer.outPoint ? layer.outPoint : outPoint;
+    });
+
+    nullLayer.inPoint = inPoint ?? 0;
+    nullLayer.outPoint = outPoint;
     nullLayer.name = `NULL ${firstLayer.name}`;
+
+    selectedLayer.forEach((layer) => {
+      layer.parent = nullLayer;
+    });
   } finally {
     logger.flush();
   }
