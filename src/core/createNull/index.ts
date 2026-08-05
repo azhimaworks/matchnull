@@ -33,7 +33,7 @@ const createNull = (logger: Logger) => {
     const propertiesInfoLayers = selectedLayer.map((l, index) => {
       const layer = l as AVLayer;
       if (index === 0) firstLayer = layer;
-      is3DLayer = isThreeDLayer(layer);
+      is3DLayer = layer instanceof CameraLayer ? true : isThreeDLayer(layer);
 
       const transformMatchNames = is3DLayer
         ? THREE_D_TRANSFORM_PROPERTIES
