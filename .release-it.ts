@@ -9,10 +9,12 @@ export default {
     releaseName: "matchnull ${version}",
     assets: ["dist/*.jsx"],
   },
-  npm: {
-    publish: false,
-  },
+  npm: false,
   plugins: {
+    "@release-it/bumper": {
+      in: "package.json",
+      out: "package.json",
+    },
     "@release-it/conventional-changelog": {
       preset: "angular",
       infile: "changelog.md",
