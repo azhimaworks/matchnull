@@ -30,4 +30,4 @@ jobs:
       - name: release-it
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm release-it --ci
+        run: pnpm release --ci
