@@ -178,6 +178,7 @@ const createNull = (logger: Logger) => {
     nullLayer.inPoint = inPoint ?? 0;
     nullLayer.outPoint = outPoint;
     nullLayer.name = `NULL ${firstLayer.name}`;
+    nullLayer.label = 9;
 
     selectedLayer.forEach((layer) => {
       layer.parent = nullLayer;
