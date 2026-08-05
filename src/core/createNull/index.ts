@@ -137,8 +137,20 @@ const createNull = (logger: Logger) => {
 
     selectedLayer.forEach((layer) => (layer.parent = nullLayer));
     nullLayer.moveBefore(firstLayer);
-    nullLayer.inPoint = firstLayer.inPoint;
-    nullLayer.outPoint = firstLayer.outPoint;
+
+    let inPoint: number | null = null;
+    let outPoint = 0;
+    selectedLayer.forEach((layer) => {
+      if (!inPoint) {
+        inPoint = layer.inPoint;
+      }
+
+      inPoint = inPoint > layer.inPoint ? layer.inPoint : inPoint;
+      outPoint = outPoint < layer.outPoint ? layer.outPoint : outPoint;
+    });
+
+    nullLayer.inPoint = inPoint ?? 0;
+    nullLayer.outPoint = outPoint;
     nullLayer.name = `NULL ${firstLayer.name}`;
   } finally {
     logger.flush();
