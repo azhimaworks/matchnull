@@ -8,6 +8,9 @@ export default {
     release: true,
     releaseName: "matchnull ${version}",
   },
+  npm: {
+    publish: false,
+  },
   plugins: {
     "@release-it/conventional-changelog": {
       preset: "angular",
