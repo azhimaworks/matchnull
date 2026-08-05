@@ -1,6 +1,8 @@
 # matchnull
 
-After effect script to create null parent quickly
+Adobe After Effects script for creating a null layer as a parent
+
+This script is a standalone script, not a UI panel script. It can be run via the After Effects File > Run Scripts menu, or added to a bar such as [AEBar](https://motionfun.net/tools/aebar).
 
 ## Building from Source
 
