@@ -90,7 +90,7 @@ export const getPropertyValue = (
     return [posXVal, posYVal];
   }
 
-  return property.value;
+  return getSinglePropertyValue(property, options.mode, options.time);
 };
 
 export const getSinglePropertyValue = (
