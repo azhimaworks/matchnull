@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.1](https://github.com/azhimaworks/matchnull/compare/0.3.0...0.3.1) (2026-08-05)
+
+### Bug Fixes
+
+* null layer does not transform to threeDLayer if the target layer is ([e3ca300](https://github.com/azhimaworks/matchnull/commit/e3ca300fe02376982cd32a16255f6031bbf592cb))
+
 # [0.3.0](https://github.com/azhimaworks/matchnull/compare/0.2.0...0.3.0) (2026-08-05)
 
 ### Bug Fixes
