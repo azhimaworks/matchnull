@@ -18,6 +18,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "esbuild": "^0.28.1",
     "extendscriptr": "^1.2.5",
     "types-for-adobe": "^7.2.5"
   },
