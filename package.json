@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "pnpm esbuild src/index.ts --bundle --outfile=dist/bundle.js --platform=node",
+    "build": "pnpm extendscriptr --script dist/bundle.js --output dist/matchnull.jsx"
   },
   "keywords": [],
   "author": "",
