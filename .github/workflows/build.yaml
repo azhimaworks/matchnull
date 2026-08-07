@@ -1,0 +1,32 @@
+name: Build MatchNull
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          cache: true
+
+      - name: install dependency
+        run: pnpm install
+
+      - name: build matchnull
+        run: pnpm build
+
+      - uses: actions/upload-artifact@v7
+        with:
+          path: dist/matchnull.jsx
