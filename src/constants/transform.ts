@@ -1,3 +1,4 @@
+export const ADBE_ANCHOR_POINT = "ADBE Anchor Point";
 export const ADBE_POSITION = "ADBE Position";
 export const ADBE_POSITION_X = "ADBE Position_0";
 export const ADBE_POSITION_Y = "ADBE Position_1";

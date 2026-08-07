@@ -1,4 +1,5 @@
 import {
+  ADBE_ANCHOR_POINT,
   ADBE_ORIENTATION,
   ADBE_ROTATE_X,
   ADBE_ROTATE_Y,
@@ -12,7 +13,13 @@ export const mapPropertiesForNull = (
   properties: PropertiesInfo[],
   isThreeDLayer: boolean,
 ) => {
-  const propertiesInfo: PropertiesInfo[] = [];
+  const propertiesInfo: PropertiesInfo[] = [
+    {
+      propertyGroupMatchName: ADBE_TRANSFORM_GROUP,
+      propertyMatchName: ADBE_ANCHOR_POINT,
+      value: [50, 50],
+    },
+  ];
 
   const rotationValue: Record<string, number> = {
     [ADBE_ROTATE_X]: 0,
