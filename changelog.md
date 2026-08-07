@@ -1,5 +1,11 @@
 # Changelog
 
+# [0.4.0](https://github.com/azhimaworks/matchnull/compare/0.3.2...0.4.0) (2026-08-07)
+
+### Features
+
+* Move null anchor point to center ([2844f6e](https://github.com/azhimaworks/matchnull/commit/2844f6e9074e3cf0f4b2c259eaf34503c1cfce53))
+
 ## [0.3.2](https://github.com/azhimaworks/matchnull/compare/0.3.1...0.3.2) (2026-08-07)
 
 ### Bug Fixes
