@@ -3,6 +3,7 @@ import type { Config } from "release-it";
 export default {
   git: {
     tagName: "${version}",
+    commitMessage: "chore: Release matchnull ${version}",
   },
   github: {
     release: true,
