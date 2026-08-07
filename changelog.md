@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.2](https://github.com/azhimaworks/matchnull/compare/0.3.1...0.3.2) (2026-08-07)
+
+### Bug Fixes
+
+* Different null scale can make child position unpredictable ([7fbd2d5](https://github.com/azhimaworks/matchnull/commit/7fbd2d5908efd4d63aab9615bb9c800d6c061d69))
+
 ## [0.3.1](https://github.com/azhimaworks/matchnull/compare/0.3.0...0.3.1) (2026-08-05)
 
 ### Bug Fixes
