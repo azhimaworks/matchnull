@@ -110,7 +110,7 @@ export const getSinglePropertyValue = (
 export const extractKeyframeData = (
   property: Property,
 ): KeyframeData[] | null => {
-  if (!isHaveKeyframe) return null;
+  if (!isHaveKeyframe(property)) return null;
 
   const keyframes: KeyframeData[] = [];
   const numKeys = property.numKeys;
